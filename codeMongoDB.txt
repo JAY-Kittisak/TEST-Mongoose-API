@@ -2,20 +2,20 @@ mongo
 
 show dbs;
 
-use hello-mongodb
+use <ชื่อฐานข้อมูล>
 
 show dbs;
 
-db.users.insertOne({ name: 'Name1', age: 20, lastname: 'lastname1', score: 150 });
-db.users.insertMany([{name: 'Name5', age: 26, lastname: 'lastname1', score: 150 },{name: 'Name6', age: 29, lastname: 'lastname1', score: 150 }]);db.users.find();
+db.<Collection ของ DATA>.insertOne({ name: 'Name1', age: 20, lastname: 'lastname1', score: 150 });
+db.<Collection ของ DATA>.insertMany([{name: 'Name5', age: 26, lastname: 'lastname1', score: 150 },{name: 'Name6', age: 29, lastname: 'lastname1', score: 150 }]);db.users.find();
 
-db.users.find({name:'Name1'});
-db.users.find({}).pretty();
-db.users.find({ $or: [{ name: 'Name1'}, { age: { $eq: {25} }] });
-db.cats.findOne({_id: ObjectId("5f8907a0316f8132d412f129") })
+db.<Collection ของ DATA>.find({name:'Name1'});
+db.<Collection ของ DATA>.find({}).pretty();
+db.<Collection ของ DATA>.find({ $or: [{ name: 'Name1'}, { age: { $eq: {25} }] });
+db.<Collection ของ DATA>.findOne({_id: ObjectId("5f8907a0316f8132d412f129") })
 
-db.users.updeteOne({ name: 'Name4' }, { $set: { age: 30 } });
-db.users.updeteMany({ name: 'Name4' }, { $set: { age: 30 } });
+db.<Collection ของ DATA>.updeteOne({ name: 'Name4' }, { $set: { age: 30 } });
+db.<Collection ของ DATA>.updeteMany({ name: 'Name4' }, { $set: { age: 30 } });
 
-db.users.deleteOne({ name: 'Name3 '});
+db.<Collection ของ DATA>.deleteOne({ name: 'Name3 '});
 
